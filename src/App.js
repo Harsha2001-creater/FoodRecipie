@@ -3,6 +3,12 @@ import './App.css';
 import './key';
 import Axios from 'axios';
 import Receipe from './components/recipieTile.js'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from 'react-router-dom'
 
 function App() {
 
@@ -23,6 +29,28 @@ function App() {
     getrecipes();
   }
 
+  const Home = () => {
+    return (
+      <>
+
+        <h1>Food Recipe Plaza</h1>
+        <form className="app_searchForm" onSubmit={onSubmit}>
+          <input
+            type="text"
+            placeholder="Enter the Item....."
+            value={query}
+            className="app_input"
+            onChange={(e) => setquery(e.target.value)}
+          />
+          <input type="submit" value="Search" className="app_submit" />
+        </form>
+        <div className="app_recipie">
+          {recipes.map(recipe => <Receipe items={recipe} />)}
+        </div>
+      </>
+    )
+  }
+
   return (
     <div className="app">
       <h1>Food Recipe Plaza</h1>
@@ -39,6 +67,7 @@ function App() {
       <div className="app_recipie">
         {recipes.map(recipe => <Receipe items={recipe} />)}
       </div>
+      {/* <Home /> */}
 
     </div>
   );
