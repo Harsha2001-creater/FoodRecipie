@@ -29,3 +29,11 @@
   color: white;
   border-radius: 4px;
 }
+.app_recipie{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 80%;
+
+}

@@ -36,7 +36,7 @@ function App() {
         />
         <input type="submit" value="Search" className="app_submit" />
       </form>
-      <div>
+      <div className="app_recipie">
         {recipes.map(recipe => <Receipe items={recipe} />)}
       </div>
 

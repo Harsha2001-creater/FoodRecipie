@@ -1,0 +1,18 @@
+.recipeTile_img{
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin:30px 10px 10px 10px;
+    box-shadow: 0px 0px 5px 1px rgb(110, 99, 99);
+}
+.recipeTile_name{
+    max-width: 250px;
+    text-align: center;
+    margin: 15px 0px;
+    font-weight: 500;
+    text-shadow: 1px 1px 1px 1px grey;
+}
+.recipeTile{
+    max-width: 30%;
+}
